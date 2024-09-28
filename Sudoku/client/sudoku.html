@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Rétro game - Sudoku</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+
+<body onkeydown="toucher(event);" onload="initGrille(2, true, false);">
+
+    <div id="container">
+        <header>
+            <div id="home-button-container">
+                <a href="../../portfolio-details/portfolio-details6.html"><button class="retro-button">Retour</button></a>
+            </div>
+            <img id="centered-image" src="../images/sudoku.png" alt="Sudoku">
+        </header>
+        
+
+        <div id="buttons-top-left">
+            <div>
+                <button onclick="initGrille(2, true, true);">Nouvelle Grille</button>
+                <button onclick="initGrille(2, false, true);">Recommencer</button>
+                <div id="niveau-button-container">
+                    <button id="niveau-button" onclick="toggleNiveauDropdown()">Voir les niveaux</button>
+                    <select id="niveau-dropdown" class="retro-dropdown" style="display: none;" onchange="changeNiveau(this.value)">
+                        <option value="1" class="retro-button">Niveau faible</option>
+                        <option value="2" class="retro-button">Niveau moyen</option>
+                        <option value="3" class="retro-button">Niveau difficile</option>
+                    </select>
+                </div>
+            </div>
+
+            
+
+        </div>
+        
+        <div id="buttons-bottom-right">
+            <button onmouseover="verif(true);" onmouseout="verif(false);">Vérifier</button>
+            <button onmouseover="reponse(true);" onmouseout="reponse(false);">Réponse</button>
+        </div>
+        
+        
+        <main role="main">
+            <div id="sudoku-container">
+                <div id="sudoku-frame">
+                    <div id="grille"></div>
+                    <div id="message-overlay">
+                        <div id="message-container">
+                            <p id="message-text"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+        </main>
+        <footer>
+            <p>© 2023 Rétro Game - Sudoku - RYNS</p>
+        </footer>
+    </div>
+
+    <!-- Inclure le script JavaScript -->
+    <script src="../js/sudokuv2.js"></script>
+</body>
+
+</html>
