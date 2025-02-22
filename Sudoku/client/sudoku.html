@@ -21,14 +21,14 @@
 
         <div id="buttons-top-left">
             <div>
-                <button onclick="initGrille(2, true, true);">Nouvelle Grille</button>
-                <button onclick="initGrille(2, false, true);">Recommencer</button>
+                <button onclick="initGrille(2, true, true);">New grail</button>
+                <button onclick="initGrille(2, false, true);">Restart</button>
                 <div id="niveau-button-container">
-                    <button id="niveau-button" onclick="toggleNiveauDropdown()">Voir les niveaux</button>
+                    <button id="niveau-button" onclick="toggleNiveauDropdown()">Levels</button>
                     <select id="niveau-dropdown" class="retro-dropdown" style="display: none;" onchange="changeNiveau(this.value)">
-                        <option value="1" class="retro-button">Niveau faible</option>
-                        <option value="2" class="retro-button">Niveau moyen</option>
-                        <option value="3" class="retro-button">Niveau difficile</option>
+                        <option value="1" class="retro-button">Easy</option>
+                        <option value="2" class="retro-button">Medium</option>
+                        <option value="3" class="retro-button">Hard</option>
                     </select>
                 </div>
             </div>
@@ -38,8 +38,8 @@
         </div>
         
         <div id="buttons-bottom-right">
-            <button onmouseover="verif(true);" onmouseout="verif(false);">Vérifier</button>
-            <button onmouseover="reponse(true);" onmouseout="reponse(false);">Réponse</button>
+            <button onmouseover="verif(true);" onmouseout="verif(false);">Check</button>
+            <button onmouseover="reponse(true);" onmouseout="reponse(false);">Answer</button>
         </div>
         
         
